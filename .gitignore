@@ -1,0 +1,26 @@
+# --- JAVA BACKEND ---
+backend/target/
+backend/mvnw
+backend/mvnw.cmd
+backend/.mvn/
+backend/help.md
+*.class
+*.log
+*.jar
+
+# --- NODEJS / SMART CONTRACTS ---
+node_modules/
+npm-debug.log
+yarn-error.log
+smart-contracts/artifacts/
+smart-contracts/cache/
+smart-contracts/typechain-types/
+
+# --- IDE SETTINGS (VS Code & IntelliJ) ---
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# --- SECURITY (VERY IMPORTANT) ---
+.env

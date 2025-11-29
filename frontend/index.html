@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Mart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> NFT Mart</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="mint.html">Mint NFT</a>
+            <a href="marketplace.html">Marketplace</a>
+        </nav>
+        <button id="connectWalletBtn" onclick="connectWallet()">Connect Wallet</button>
+        <span id="walletAddress"></span>
+    </header>
+
+    <main class="hero">
+        <h1>Discover, Collect, and Sell Extraordinary NFTs</h1>
+        <p>The world's finest digital marketplace for crypto collectibles and non-fungible tokens (NFTs).</p>
+        <div class="hero-btns">
+            <a href="marketplace.html"><button class="btn-primary">Explore</button></a>
+            <a href="mint.html"><button class="btn-secondary">Create</button></a>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+    <script src="js/wallet.js"></script>
+</body>
+</html>

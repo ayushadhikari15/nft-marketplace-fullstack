@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint NFT - Mart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> NFT Mart</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mint.html" class="active">Mint NFT</a>
+            <a href="marketplace.html">Marketplace</a>
+        </nav>
+        <button id="connectWalletBtn" onclick="connectWallet()">Connect Wallet</button>
+        <span id="walletAddress"></span>
+    </header>
+
+    <div class="container" style="max-width: 600px; margin: 50px auto; padding: 20px;">
+        <div class="card">
+            <h2 style="text-align: center;">Create Your NFT</h2>
+            
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>NFT Name</label>
+                <input type="text" id="nftName" placeholder="e.g. Cosmic Ape" style="width: 100%; padding: 10px; margin-top: 5px;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label>Description</label>
+                <textarea id="nftDescription" placeholder="Describe your NFT..." style="width: 100%; padding: 10px; margin-top: 5px; height: 100px;"></textarea>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label>Image URL (or IPFS Link)</label>
+                <input type="text" id="nftImage" placeholder="https://..." value="https://via.placeholder.com/300" style="width: 100%; padding: 10px; margin-top: 5px;">
+                <small style="color: #a4b0be;"></small>
+            </div>
+
+            <button onclick="mintNFT()" class="btn-primary" style="width: 100%;">Mint NFT</button>
+            
+            <p id="status" style="margin-top: 15px; text-align: center; color: yellow;"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+    <script src="js/wallet.js"></script>
+    <script src="js/nft.js"></script>
+</body>
+</html>

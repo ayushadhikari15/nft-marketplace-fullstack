@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Buy & Sell</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> NFT Mart</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mint.html">Mint NFT</a>
+            <a href="marketplace.html" class="active">Marketplace</a>
+        </nav>
+        <button id="connectWalletBtn" onclick="connectWallet()">Connect Wallet</button>
+        <span id="walletAddress"></span>
+    </header>
+
+    <div class="container" style="max-width: 1000px; margin: 40px auto; padding: 20px;">
+        
+        <div class="card" style="margin-bottom: 40px; border: 1px solid var(--primary);">
+            <h3>💰 Sell Your NFT</h3>
+            <div style="display: flex; gap: 10px; align-items: flex-end;">
+                <div style="flex: 1;">
+                    <label>Token ID</label>
+                    <input type="number" id="sellTokenId" placeholder="e.g. 1" style="width: 90%; padding: 10px;">
+                </div>
+                <div style="flex: 1;">
+                    <label>Price (in ETH)</label>
+                    <input type="number" id="sellPrice" placeholder="e.g. 0.1" step="0.01" style="width: 90%; padding: 10px;">
+                </div>
+                <button onclick="listNFT()" class="btn-secondary" style="height: 42px;">List for Sale</button>
+            </div>
+            <p id="listStatus" style="margin-top: 10px; color: yellow;"></p>
+        </div>
+
+        <h2>🔥 Active Listings</h2>
+        <button onclick="loadListings()" style="margin-bottom: 20px; font-size: 12px;">Refresh List</button>
+        
+        <div id="marketplaceGrid" class="grid">
+            <p>Loading items...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+    <script src="js/wallet.js"></script>
+    <script src="js/marketplace.js"></script>
+</body>
+</html>
