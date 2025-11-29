@@ -44,8 +44,3 @@ Follow these steps to run the project locally.
 * Node.js & npm
 * Java JDK 21
 * MetaMask Extension (Browser)
-
-### 2. Clone Repository
-```bash
-git clone [https://github.com/ayushadhikari15/nft-marketplace-fullstack.git](https://github.com/ayushadhikari15/nft-marketplace-fullstack.git)
-cd nft-marketplace-fullstack
